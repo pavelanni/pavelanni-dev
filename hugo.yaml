@@ -1,0 +1,42 @@
+baseURL: https://pavelanni.dev/
+languageCode: en-us
+title: Pavel Anni
+theme: PaperMod
+
+params:
+  author: Pavel Anni
+  description: Pavel Anni's personal website
+  keywords: [ Pavel Anni, Pavel, Anni, Pavel Anni's personal website, Pavel Anni's blog, Pavel Anni's portfolio ]
+  social:
+  - icon: github
+    link: https://github.com/pavelanni
+  - icon: linkedin
+    link: https://www.linkedin.com/in/pavelanni/
+  - icon: twitter
+    link: https://x.com/pavelanni
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowFullTextinRSS: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowRssButtonInSectionTermList: true
+  DateFormat: 2006-01-02
+
+menu:
+  main:
+  - name: Projects
+    identifier: projects
+    url: /projects/
+    weight: 10
+  - name: Blog
+    identifier: blog
+    url: /blog/
+    weight: 20
+  - name: Texts
+    identifier: texts
+    url: /texts/
+    weight: 30
+  - name: About
+    identifier: about
+    url: /about/
+    weight: 40

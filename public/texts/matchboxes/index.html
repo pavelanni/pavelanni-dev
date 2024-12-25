@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Machine learning with matchboxes | Pavel Anni</title>
+<meta name="keywords" content="">
+<meta name="description" content="A journey from a childhood game to machine learning principles">
+<meta name="author" content="Pavel Anni">
+<link rel="canonical" href="http://localhost:1313/texts/matchboxes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/texts/matchboxes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Pavel Anni (Alt + H)">Pavel Anni</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/texts/" title="Texts">
+                    <span>Texts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/texts/">Texts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Machine learning with matchboxes
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-description">
+      A journey from a childhood game to machine learning principles
+    </div>
+    <div class="post-meta"><span title='2024-05-26 00:00:00 +0000 UTC'>2024-05-26</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1325 words&nbsp;·&nbsp;Pavel Anni
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/texts/matchboxes/board_position.webp" alt="">
+        
+</figure>
+  <div class="post-content"><p>I made my first machine learning project when I was 12. I used 24 matchboxes, 55 (give or take) cherry pits, gouache paint, paper, scissors, glue, and colored pencils. That was all I needed to start working with machine learning in the 1980s.</p>
+<p>My dad gave me a book by Martin Gardner describing a simple game and a machine for playing it. He called the game Hexapawn because it used just six pawns on a 3x3 board.</p>
+<h2 id="the-game-and-rules">The game and rules<a hidden class="anchor" aria-hidden="true" href="#the-game-and-rules">#</a></h2>
+<p>The rules are simple. Here is how Martin Gardner describes them (<a href="https://gwern.net/doc/reinforcement-learning/model-free/1991-gardner-ch8amatchboxgamelearningmachine.pdf">https://gwern.net/doc/reinforcement-learning/model-free/1991-gardner-ch8amatchboxgamelearningmachine.pdf</a> ):</p>
+<p>Only two types of move are allowed:</p>
+<p>(1) A pawn may advance straight forward one square to an empty square;
+(2) a pawn may capture an enemy pawn by moving one square diagonally, left or right, to a square occupied by the enemy. The captured piece is removed from the board.</p>
+<p>These are the same as pawn moves in chess, except that no double move, en passant capture, or promotion of pawns is permitted. The game is won in any of three ways:</p>
+<ol>
+<li>By advancing a pawn to the third row.</li>
+<li>By capturing all enemy pieces.</li>
+<li>By achieving a position in which the enemy cannot move.</li>
+</ol>
+<h2 id="the-project">The project<a hidden class="anchor" aria-hidden="true" href="#the-project">#</a></h2>
+<p>Creating a board and finding the pieces to play was the easy part. After that, I had to create the machine itself. Martin Gardner called it HER: Hexapawn Educable Robot.</p>
+<p>The whole game never lasts longer than six moves. I, the human, was playing white, and the robot was playing black. So I had to give it (HER?) instructions for each even move.</p>
+<p>I split twenty-four matchboxes into three groups: for moves 2, 4, and 6. Each box had a picture describing the position and the possible moves for that position for black. Each box contained several colored cherry pits according to the number of possible moves.</p>
+<p><img alt="Old boxes" loading="lazy" src="/texts/matchboxes/old_boxes.webp"></p>
+<p>So, I had two boxes for the second move because there were two different positions after the first move by white (three if you count the symmetrical one). I had 11 boxes for the fourth move and another 11 boxes for the sixth move.</p>
+<h2 id="time-to-play-and-learn">Time to play and learn<a hidden class="anchor" aria-hidden="true" href="#time-to-play-and-learn">#</a></h2>
+<p>Now, the game begins! You move your white pawn, take the matchbox with your current position, shake it, and pick one colored cherry pit from it (don’t look! Pick it randomly!). You make a move for the robot using the arrow of the cherry pit’s color and put it back in the box.</p>
+<p>After six moves, either you or the robot wins.</p>
+<p>Now begins the learning part. If the robot loses, you “punish” it by removing the colored pit responsible for the last move. For example, in box six above, if the last move for black was “green,” then black would lose. If that was the case, you remove the green pit from the box, leaving only the winning moves. If there is only one colored pit in the box, you “punish” the box responsible for the previous (fourth) move. That way, you ensure the robot never reaches the box with only one losing move.</p>
+<p>Are the rules clear? Let’s start playing and teaching the machine!</p>
+<p>The machine learns surprisingly fast. If you teach it correctly, it becomes invincible after 30–40 games. Don’t believe me? Try it!</p>
+<h2 id="new-generation">New generation<a hidden class="anchor" aria-hidden="true" href="#new-generation">#</a></h2>
+<p>Forty years later, I found that book by Martin Gardner.</p>
+<p><img alt="Martin Gardner&rsquo;s book cover" loading="lazy" src="/texts/matchboxes/martin_gardner_cover.webp"></p>
+<p>(<a href="https://www.amazon.com/Colossal-Book-Short-Puzzles-Problems/dp/0393061140/">https://www.amazon.com/Colossal-Book-Short-Puzzles-Problems/dp/0393061140/</a> ) and rebuilt the machine with my son.</p>
+<p>Of course, we used a computer to create the board and move diagrams. We found colored beads in a nearby store (no need to paint cherry pits!). But the fun was the same!</p>
+<p>My son published the instructions with the ready-to-use printouts you can download, cut, and glue on your matchboxes: <a href="https://www.instructables.com/Matchbox-Mini-Chess-Learning-Machine/">https://www.instructables.com/Matchbox-Mini-Chess-Learning-Machine/</a></p>
+<p>They look more polished now!</p>
+<p><img alt="New boxes" loading="lazy" src="/texts/matchboxes/new_boxes.webp"></p>
+<h2 id="machine-learning-ideas">Machine learning ideas<a hidden class="anchor" aria-hidden="true" href="#machine-learning-ideas">#</a></h2>
+<p>I hear you saying, “I thought it was a serious article about Machine Learning, but you are talking about child games with pencils and colored beads!” Let’s see if we can find the basic machine learning ideas in this game.</p>
+<h3 id="input-and-output">Input and output<a hidden class="anchor" aria-hidden="true" href="#input-and-output">#</a></h3>
+<p>We begin with some input — the starting position. We must find the right output — the sequence of moves that will bring the machine to win the game. We must help the robot choose the right move at every possible position. Some moves are better than others, and we inform the robot about them using weights.</p>
+<h3 id="weights">Weights<a hidden class="anchor" aria-hidden="true" href="#weights">#</a></h3>
+<p>In each position, we have several options for the next move. Depending on the game’s outcome, we can make certain move options more or less preferable for the next game (learning pass). Isn’t it similar to the weights we assign to certain neurons? Only in this case is it binary: you either leave the bead in the box (1) or remove it (0).</p>
+<p>These days, we call it quantization, i.e., reducing the number of bits used by weights (e.g., from float32 to int8 and lower). In this case, each weight is exactly one bit, which tells us whether the bead is in the box or not.</p>
+<h3 id="reinforcement-learning">Reinforcement learning<a hidden class="anchor" aria-hidden="true" href="#reinforcement-learning">#</a></h3>
+<p>Each time the machine gives you a wrong result, you adjust its weights. What is it, if not reinforcement learning? Environment, State, Agent, Action, Reward, right?</p>
+<h3 id="backpropagation">Backpropagation<a hidden class="anchor" aria-hidden="true" href="#backpropagation">#</a></h3>
+<p>Remember what you must do if only one bead is left in the box responsible for the last move? You can’t leave it empty, so you must apply the Reward (or, rather, the punishment) to the box responsible for the previous move. And so on and so forth. It looks like backpropagation, doesn’t it?</p>
+<h2 id="going-further">Going further<a hidden class="anchor" aria-hidden="true" href="#going-further">#</a></h2>
+<p>It’s pretty easy to play 30–40 games with the machine to make it invincible. Each game takes a few minutes, so we can achieve that result in less than an hour. But what if we could automate it? What if we could create a program to play the game and make two programs play against each other like they did with the Alpha Go program?</p>
+<p>This sounds like a fun project that would be pretty easy to implement. But we are talking about ML and AI here, right? Why don’t we use AI to help us write this program?</p>
+<p>I didn’t expect much when I entered the following prompt into ChatGPT.</p>
+<blockquote>
+<p>You are a Go programming expert. I will upload a file describing a simple chess-like game called Hexapawn. I want to write a program to implement this game. I must choose the data structures to store board positions and available (legal) moves in each position. Then, I have to implement the move and the whole game functions. Finally, I have to implement the learning procedure. Please help me develop this program. I have attached the PDF file with the game description.</p>
+</blockquote>
+<p>And I uploaded the 15-page PDF that I linked at the very beginning.</p>
+<p>I’ll tell you what happened next in the following article. Sorry, I couldn’t resist using this phrase. Also, ChatGPT told me that this article’s length is ideal and that I should stop writing immediately.</p>
+<h2 id="other-works">Other works<a hidden class="anchor" aria-hidden="true" href="#other-works">#</a></h2>
+<p>I discovered that I&rsquo;m not alone in making parallels between this simple game an Machine Learning principles.
+After a quick search I found many interesting articles about using this game in teaching.
+Here is a short list of articles.</p>
+<p><strong>Pomona College</strong> uses it in the <a href="http://www.cs.pomona.edu/~kim/CSC062S07/labs/Lab6/HexAPawn.pdf">computer science labs</a></p>
+<p><strong>Proceedings of Machine Learning Research</strong> directly addresses the idea of using the Hexapawn game in teaching Machine Learning: <a href="https://proceedings.mlr.press/v170/marx22a/marx22a.pdf">Using Matchboxes to Teach the Basics of Machine Learning: an Analysis of (Possible) Misconceptions</a>.</p>
+<p><strong>Computd</strong> calls it <a href="https://computd.nl/hexapawn-accessible-machine-learning/">&ldquo;The accessible physical machine learning model&rdquo;</a>.</p>
+<p><strong>University of Wisconsin-Madison</strong> recommends Hexapawn as the <a href="https://education.mrsec.wisc.edu/hexapawn/">Introduction to Machine Learning</a> for students ages 11 and higher.</p>
+<p><strong>Digital Business Development</strong> calls it <a href="https://dbd.au.dk/c/knowledge/tool-hexapawn-a-machine-learning-teaching-tool">a machine-learning teaching tool</a>.
+They implemented a version of the game in <a href="https://bitbucket.org/aucbd/hexapawnts">JavaScript</a> but the game is not available online anymore.
+Feel free to take the code and deploy it yourself.</p>
+<p><strong>Mark Lawler</strong> wrote a story about <a href="https://mikesmathpage.wordpress.com/2017/09/03/intro-machine-learning-for-kids-via-martin-gardners-article-on-hexapawn/">showing this game to kids</a>.
+He even recorded several videos of them playing the game and explaining it.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Pavel Anni</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

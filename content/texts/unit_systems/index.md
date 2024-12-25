@@ -1,0 +1,33 @@
+---
+date: '2024-08-08'
+draft: true
+title: "Thoughts on the Metric System: An Immigrant’s Perspective"
+cover:
+  image: "cover.webp"
+---
+
+I’ve long intended to write about the comparison between the metric and American measurement systems. It’s a topic that periodically resurfaces in American discourse, often sparking passionate debates about tradition versus global standardization.
+
+It’s fascinating to reflect on how my own attitude towards this debate has evolved. When I first arrived in America, I had to adapt to these unfamiliar measurements, and I initially resisted. “What’s with all these illogical units?” I thought. It wasn’t even the individual measures that bothered me most — after all, what’s inherently wrong with an inch, and how is a centimeter radically better? No, it was the seeming lack of logic in the system as a whole that irked me. Why are there 12 inches in a foot but three feet in a yard? And then 16 ounces in a pound? It all seemed arbitrary and inexplicable.
+
+And don’t get me started on the obsession with fractions — all those sixteenths and thirty-seconds, it’s maddening! I remember a real-life problem I encountered at the post office: I needed to choose a box for a package. Two boxes cost the same, but their sizes were different: one was 11" x 8–1/2" x 5–1/2", and the other was 11–7/8" x 3–3/8" x 13–5/8". The question was: which one has a larger volume? Try calculating that in your head! I began to wonder if American schoolchildren were taught some secret techniques for multiplying fractions, which were unknown to us decimal users. Spoiler alert: they aren’t.
+
+Then there’s Fahrenheit! In Celsius, it seems so straightforward: zero is when water freezes, and 100 is when it boils. But Fahrenheit? The zero point seems arbitrary (it was actually the coldest temperature Fahrenheit could achieve in his laboratory, about -18°C). The distance from zero to the water’s freezing point is divided into 32 degrees. Then, he set the boiling point of water at 212 degrees because the 180-degree span between freezing and boiling is conveniently divisible by many fractions. Again, with the non-decimal fractions!
+
+As time passed, however, my perspective began to shift. One summer, I dove into various woodworking projects — building flower beds, decking, etc. Suddenly, I realized it felt natural to think about lumber in feet and inches. The width in inches is expressed in single-digit numbers: boards 4, 6, or 8 inches wide are standard, occasionally 10 inches. Lengths of 6 or 8 feet are also convenient, single-digit numbers. Using meters and centimeters would have been far more complicated. I surprised myself with this realization.
+
+The same goes for bolts and nuts. Inch and half-inch bolts make sense, but what about the tiny ones? Surely we don’t resort to thirty-seconds of an inch? It turns out we don’t need to. Small bolts are simply numbered: #2, #4, #6, up to #12. After that, it’s a quarter-inch and up. Sounds crazy, right? But once you get used to it, it’s not so bad. You learn to visualize what a #6 bolt looks like — just a tad smaller than #8. It becomes second nature.
+
+I had another epiphany during a trip to Canada. I’d always claimed that miles bothered me least of all American measurements — the speedometer shows miles, and road signs display distances in miles. You look, you calculate, and you’re done. But in Canada, I discovered that I wasn’t calculating at all — I had developed an intuitive feel for miles. I’d see a road sign saying “20 km ahead” and suddenly arrive at my destination, thinking, “That was quick!” I realized I had been estimating distances in miles without even thinking about it.
+
+The issue of fractions deserves special attention. When comparing metric and American systems, we often conflate two distinct aspects: the units of measurement themselves (length, weight, etc.) and how these units are subdivided. The metric system uses decimal division throughout. Convenient, right? There are 100 centimeters in a meter and 1000 grams in a kilogram. Converting between units is a breeze. The American system, however, is built on halves: halves, quarters, eighths, sixteenths, and so on. At first glance — through our decimal-tinted lenses — it seems horribly inconvenient. Adding and subtracting become cumbersome: what’s three-quarters minus seven thirty-seconds? You need to find a common denominator, and… ugh. Multiplication is even worse.
+
+BUT — and this is a big but — it’s actually quite practical for everyday use. Think about it: even we “decimal people,” when we see 0.5, think “half,” and when we see 0.25, we think “quarter,” right? We don’t mentally divide the whole into 10 parts and take five of them. We just take half. For daily life, simple fractions often feel more intuitive than decimals. For calculations, decimals win hands down, but for practical applications, fractions have their merits.
+
+Or do they? Let’s take another look at the fractions common in the American system: halves, quarters, eighths, sixteenths… Ring any bells? It’s essentially a binary system beloved by computers and programmers alike! Those in the know understand the computational gymnastics required for a computer to convert binary numbers to the decimal system we humans prefer.
+
+Now, back to Fahrenheit. It seems like a bizarre temperature scale, not clearly anchored to anything tangible and decidedly non-decimal. Celsius appears much more logical, right? That’s why Fahrenheit is only used in three countries, while Celsius is the global standard. But let’s consider this from an everyday perspective: do I really care about water’s boiling point when I’m checking the weather? I just want to know if it’s hot or cold! In Fahrenheit, I know that zero is bone-chillingly cold, and 100 is swelteringly hot. Everything else falls between these extremes. In Celsius? Zero degrees is an ambiguous, slushy mess — neither truly cold nor warm. And 100 degrees? That’s not even a real-world temperature for the weather. Sure, scientists in labs might care about when water boils (and why water, specifically?), but for the average person, isn’t a weather-centric scale more practical?
+
+So, what’s the takeaway here? Living in a different country opens your mind to new perspectives on things you once thought were set in stone. It challenges your assumptions and broadens your horizons. In my view, it’s an excellent workout for your brain and your ability to reason.
+
+P.S. Don’t try to conclude from this text that I’m “for” or “against” either system. I’ve grown to appreciate them both! 🙂
