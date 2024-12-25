@@ -1,6 +1,6 @@
 ---
 date: '2023-04-27'
-draft: true
+draft: false
 title: 'SSH login monitor'
 description: "How a random chat at work brought me to writing an SSH login monitor program using LLM"
 cover:

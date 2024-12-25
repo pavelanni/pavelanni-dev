@@ -1,6 +1,6 @@
 ---
 date: '2024-05-26'
-draft: true
+draft: false
 title: 'Machine learning with matchboxes'
 description: "A journey from a childhood game to machine learning principles"
 cover:

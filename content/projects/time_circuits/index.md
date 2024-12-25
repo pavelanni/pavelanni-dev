@@ -1,6 +1,6 @@
 ---
 date: '2024-10-07'
-draft: true
+draft: false
 title: "Time circuits"
 description: "A TinyGo project implementing Time Circuits (for time travel, you know)"
 cover:

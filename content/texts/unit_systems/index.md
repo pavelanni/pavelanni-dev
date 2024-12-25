@@ -1,6 +1,6 @@
 ---
 date: '2024-08-08'
-draft: true
+draft: false
 title: "Thoughts on the Metric System: An Immigrant’s Perspective"
 cover:
   image: "cover.webp"
