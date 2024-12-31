@@ -1,0 +1,7 @@
+.project-reference {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--entry);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}

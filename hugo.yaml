@@ -7,6 +7,7 @@ params:
   author: Pavel Anni
   description: Pavel Anni's personal website
   keywords: [ Pavel Anni, Pavel, Anni, Pavel Anni's personal website, Pavel Anni's blog, Pavel Anni's portfolio ]
+  mainSections: [ "blog", "projects", "texts" ]
   social:
   - icon: github
     link: https://github.com/pavelanni
@@ -21,6 +22,13 @@ params:
   ShowPostNavLinks: true
   ShowRssButtonInSectionTermList: true
   DateFormat: 2006-01-02
+  profileMode:
+    enabled: false
+  homeInfoParams:
+    enabled: true
+    Title: "Welcome"
+    Content: >
+      I'm Pavel, a software engineer passionate about exploring new technologies and sharing what I learn. Please, have a seat and let's talk about programming, microcontrollers, and other cool stuff.
 
 menu:
   main:
@@ -40,3 +48,7 @@ menu:
     identifier: about
     url: /about/
     weight: 40
+
+build:
+  templateMetrics: true
+  templateMetricsHints: true

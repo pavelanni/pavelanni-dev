@@ -1,30 +1,31 @@
 ---
-date: '2024-10-07'
-draft: false
-title: "Time circuits"
-description: "A TinyGo project implementing Time Circuits (for time travel, you know)"
+title: "Control panel: A TinyGo Adventure"
+date: "2024-10-07"
+draft: true
+description: "A TinyGo project implementing a multi-functional control panel for time travel"
 cover:
   image: "cover.webp"
-
+  relative: true
+project: "/projects/time_circuits"
 ---
 
 You know how it all started? I was browsing Amazon one day (as you do) and came across this set of color 7-segment LED displays.
 
 ![Seven-segment LEDs](seven-segment-leds.webp)
 
-Instantly, I thought of the Time Circuits display from _Back to the Future_.
+Instantly, I thought of building colorful time displays with knobs to control them.
 
-This project combines two of my favorite things — tech tinkering and fun. I used two Raspberry Pi Picos, some 7-segment LED displays, rotary encoders, and (of course) Go! And before you ask — yes, it does something cool, and no, I haven’t hit 88 mph with it just yet.
+This project combines two of my favorite things — tech tinkering and fun. I used two Raspberry Pi Picos, some 7-segment LED displays, rotary encoders, and (of course) Go! And before you ask — yes, it does something cool, and no, I haven’t explored all its possibilities just yet.
 
-This isn’t my first attempt at making this thing. I originally started with an Arduino, writing the project in C++. I even got as far as setting the destination time before life happened (probably work). It stayed unfinished for years.
+This isn’t my first attempt at making this thing. I originally started with an Arduino, writing the project in C++. I even got as far as setting time with rotary encoders before life happened (probably work). It stayed unfinished for years.
 
 ![Version 1.0](version1.webp)
-Time Circuits v1.0 (Arduino)
+Control Panel v1.0 (Arduino)
 
 Version 2.0, though? That’s where things got interesting. I picked up TinyGo — a Go compiler for microcontrollers — and decided it was the perfect excuse to learn both TinyGo and Go while having fun. TinyGo works like a charm on Raspberry Pi Pico, so that became my hardware of choice.
 
 ![Version 2.0](version2.webp)
-Time Curcuits v2.0 (TinyGo and Raspberry Pi Pico)
+Control Panel v2.0 (TinyGo and Raspberry Pi Pico)
 
 ## The Hardware
 
@@ -35,7 +36,7 @@ Here’s the gear I used:
 - **Rotary encoders** for setting the time (way more satisfying than buttons)
 - **DFPlayer Mini** to play sound effects. Because what’s a time-travel toy without some audio drama?
 
-The plan was simple: one Pico would set the “destination time,” and the other would handle the “present time” and “last time departed.” When you press a button imitating the actual time travel, the “destination time” becomes your “present time,” and the fun begins. Sounds cool, right?
+The plan was simple: one Pico would set the “preset time,” and the other would handle the “current time” and “memory time.” When you press a button imitating the actual time travel, the “preset time” becomes your “current time,” and the fun begins. Sounds cool, right?
 
 ## Why TinyGo?
 
@@ -51,11 +52,11 @@ Here’s why TinyGo rocks:
 
 This setup has two brains (aka Raspberry Pi Picos) that talk to each other via UART. Here’s a rough idea of what’s going on:
 
-1. Left Pico: You set the “destination time” using rotary encoders and 7-segment displays.
+1. Left Pico: You set the “preset time” using rotary encoders and 7-segment displays.
 
-1. Right Pico: It handles the “present time” and “last time departed” and then updates the times when you hit the button to start the journey.
+1. Right Pico: It handles the “current time” and “memory time” and then updates the times when you hit the button to start the journey.
 
-When you press the “time travel” button, the destination time is sent from the left Pico to the right Pico as an RFC3339 string (fancy, huh?). Then, the present time becomes the new “last time departed” — you know, just in case you want to go back to the exact moment you left.
+When you press the “time travel” button, the preset time is sent from the left Pico to the right Pico as an RFC3339 string (fancy, huh?). Then, the present time becomes the new “memory time” — you know, just in case you want to go back to the exact moment you left.
 
 ![Hardware diagram](breadboard.webp)
 Hardware connections
@@ -66,9 +67,9 @@ I kept the code simple but flexible. I used goroutines to handle multiple tasks 
 
 Here’s the basic rundown:
 
-- You turn the rotary encoder to set the year, month, and day for the Destination time.
+- You turn the rotary encoder to set the year, month, and day for the preset time.
 - The left Pico sends that data over UART to the right Pico.
-- When you press the time-travel button, the current time is saved in the “last departed” time, and the time set as the destination becomes your present time.
+- When you press the time-travel button, the current time is saved in the “previous” time, and the time set as the target becomes your current time.
 - The present time starts ticking as your typical wall clock.
 
 ## Extra fun stuff: sound and memory
@@ -94,7 +95,7 @@ This project was a great learning experience but it wasn’t all smooth sailing.
 
 ## What’s next?
 
-There are so many ways I can build on this project. For starters, I could add a GPS and a speedometer to really nail that 88 mph speed limit and make that trigger the time-travel event instead of a lousy button. Or I could turn this into a Pomodoro timer, an alarm clock, or a chess clock — time-travel toys for all occasions.
+There are so many ways I can build on this project. For starters, I could turn this into a Pomodoro timer, an alarm clock, or a chess clock — time-related toys for all occasions.
 
 Or, who knows? Maybe I’ll create a DIY kit so you can build your own time-travel toy at home.
 

@@ -1,0 +1,74 @@
+.project-meta {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--entry);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.project-status {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.status-active {
+    background: #4caf50;
+    color: white;
+}
+
+.status-completed {
+    background: #2196f3;
+    color: white;
+}
+
+.status-archived {
+    background: #9e9e9e;
+    color: white;
+}
+
+.project-platform,
+.project-tech {
+    margin: 0.5rem 0;
+}
+
+.platform-tag,
+.tech-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    margin: 0.2rem;
+    background: var(--code-bg);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: var(--theme);
+    border-radius: var(--radius);
+    text-decoration: none;
+}
+
+.project-link:hover {
+    opacity: 0.8;
+}
+
+.post-lastmod {
+    font-style: italic;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    text-align: right;
+}

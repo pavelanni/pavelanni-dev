@@ -1,0 +1,58 @@
+{{- define "main" }}
+<!-- Custom home template -->
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- else }} {{/* if not profileMode */}}
+
+{{- if .Content }}
+<div class="home-info">
+    <div class="entry-content">
+        {{ .Content }}
+    </div>
+</div>
+{{- end }}
+
+<!-- Recent Projects Section -->
+<h3>Latest Projects</h3>
+<div class="recent-projects">
+    {{- range first 3 (where .Site.RegularPages "Section" "projects") }}
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2>{{ .Title }}</h2>
+        </header>
+        <div class="entry-content">
+            <p>{{ .Description }}</p>
+        </div>
+        <footer class="entry-footer">
+            <span class="project-status status-{{ lower .Params.status }}">{{ .Params.status }}</span>
+            {{- if .Params.lastmod }}
+            · Updated {{ .Params.lastmod | time.Format "2006-01-02" }}
+            {{- end }}
+        </footer>
+        <a class="entry-link" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+</div>
+
+<!-- Recent Blog Posts Section -->
+<h3>Recent Writing</h3>
+<div class="recent-posts">
+    {{- range first 5 (where .Site.RegularPages "Section" "in" (slice "blog" "texts")) }}
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2>{{ .Title }}</h2>
+        </header>
+        <div class="entry-content">
+            <p>{{ .Description }}</p>
+        </div>
+        <footer class="entry-footer">
+            {{- partial "post_meta.html" . -}}
+        </footer>
+        <a class="entry-link" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+</div>
+
+{{- end }}{{/* end profileMode */}}
+{{- end }}{{/* end main */}}
