@@ -112,6 +112,13 @@ The API follows HATEOAS principles, providing self-documenting endpoints:
 
 ## Updates
 
+### 2024-12-30: LCD implementation; curl to requests
+
+- Added the LCD functionality
+- Changed the LLM prompt to generate `requests` calls instead of `curl` commands
+- Changed `dialogue.py` accordingly to use `evel()` on the returned function instead of parsing the `curl` command
+- Read about it in the blog [curl vs. requests](/blog/curl_vs_requests)
+
 ### 2024-12-23: Initial Release
 
 - Completed basic implementation
