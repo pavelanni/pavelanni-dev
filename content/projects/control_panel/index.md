@@ -94,6 +94,12 @@ A hardware project that creates a multi-functional time control panel using mode
 
 ## Updates
 
+### 2024-12-31: Illustrations
+
+- Added more pictures to the blog
+- Added explanation of the time setup process
+- Renamed several things
+
 ### 2024-12-23: Documentation Update
 
 - Converted project documentation to new format
