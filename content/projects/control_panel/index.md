@@ -92,11 +92,22 @@ A hardware project that creates a multi-functional time control panel using mode
 - [ ] Develop chess clock functionality
 - [ ] Improve sound effect timing
 
+## Similar projects
+
+I found several similar projects using LED displays for time and various method to set the date/time.
+
+- [Display Wall Clock](https://www.therpf.com/forums/threads/bttf-time-circuits-display-wall-clock.287602/) by Jake Conhale
+- [Time Circuits](https://www.partsnotincluded.com/bttf-time-circuits/) by Dave Madison
+- [Time Circuit Clock](https://www.instructables.com/Back-to-the-Future-Time-Circuit-Clock/) by [AussieMakerGeek](https://www.instructables.com/member/AussieMakerGeek/)
+- [Time Circuit Clock](https://blog.adafruit.com/2012/07/02/great-scott-delorean-inspired-time-circuit-clock-with-adafruit-gear/) by Adafruit
+- [Complete Time Circuits Display Kit](https://circuitsetup.us/product/complete-time-circuits-display-kit/?v=0b3b97fa6688) from CircuitSetup (the [repo](https://github.com/CircuitSetup/Time-Circuits-Display) is also available)
+
 ## Updates
 
 ### 2024-12-31: Illustrations
 
 - Added more pictures to the blog
+  - I used these [instructions](https://filmora.wondershare.com/video-editing-tips/gimp-green-screen.html) to work with green screen in GIMP
 - Added explanation of the time setup process
 - Renamed several things
 
