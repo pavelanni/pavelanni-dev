@@ -2,7 +2,7 @@
 title: "Project: Time Control Panel"
 date: "2024-10-07"
 lastmod: "2024-12-23"
-draft: true
+draft: false
 description: "A TinyGo project implementing a multi-functional control panel with knobs and displays"
 cover:
   image: "cover.webp"

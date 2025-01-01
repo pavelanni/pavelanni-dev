@@ -1,12 +1,12 @@
 ---
 title: "Control panel: A TinyGo Adventure"
 date: "2024-10-07"
-draft: true
+draft: false
 description: "A TinyGo project implementing a multi-functional control panel for time travel"
 cover:
-  image: "cover.webp"
+  image: "panel_in_the_sky.png"
   relative: true
-project: "/projects/time_circuits"
+project: "/projects/control_panel"
 ---
 
 You know how it all started? I was browsing Amazon one day (as you do) and came across this set of color 7-segment LED displays.
@@ -24,7 +24,7 @@ Control Panel v1.0 (Arduino)
 
 Version 2.0, though? That’s where things got interesting. I picked up TinyGo — a Go compiler for microcontrollers — and decided it was the perfect excuse to learn both TinyGo and Go while having fun. TinyGo works like a charm on Raspberry Pi Pico, so that became my hardware of choice.
 
-![Version 2.0](version2.webp)
+![Version 2.0](front_panel.jpg)
 Control Panel v2.0 (TinyGo and Raspberry Pi Pico)
 
 ## The Hardware
@@ -38,6 +38,12 @@ Here’s the gear I used:
 
 The plan was simple: one Pico would set the “preset time,” and the other would handle the “current time” and “memory time.” When you press a button imitating the actual time travel, the “preset time” becomes your “current time,” and the fun begins. Sounds cool, right?
 
+I decided I'll make a version which adheres to international standards, specifically ISO-8601
+where the dates are presented in the form: `2024-12-30 15:04:05`.
+(Well, the real reason was that I couldn't find alphanumeric LEDs that could display months 😉.)
+
+![Front panel label](title_version_label.jpg)
+
 ## Why TinyGo?
 
 Let’s be honest: when working with microcontrollers, the usual suspects are Arduino, MicroPython, or maybe CircuitPython. But with TinyGo, I got to work in Go — one of my favorite languages. It just made everything more enjoyable (and less tedious).
@@ -47,14 +53,30 @@ Here’s why TinyGo rocks:
 - **Goroutines**: No more messing around with loops and managing every state yourself. With goroutines, the heavy lifting is done.
 - **Channels**: These made it super easy to pass messages around without worrying about blocking the main thread. (Looking at you, Arduino.)
 
-
 ## How it all works
 
 This setup has two brains (aka Raspberry Pi Picos) that talk to each other via UART. Here’s a rough idea of what’s going on:
 
-1. Left Pico: You set the “preset time” using rotary encoders and 7-segment displays.
+1. **Left Pico**: You set the “preset time” using rotary encoders and 7-segment displays.
+   You click the encoder and now you are in the "setting" mode.
+   You turn the encoder to find the desired value.
+   Then you click again and the value is set.
+   For the date and hour:min displays you have to do it twice. For example, to set the date:
 
-1. Right Pico: It handles the “current time” and “memory time” and then updates the times when you hit the button to start the journey.
+   - click
+   - turn, find the month
+   - click (the month is set)
+   - turn, find the day
+   - click (the day and the whole date is set)
+
+  Of course, when you turn the month encoder is goes over 12 and starts with 1 again.
+  Of course, the system knows how many days in each month and does the right thing.
+
+![Click - Turn - Click](click_turn_click.jpg)
+
+2. **Right Pico**: It handles the “current time” and “memory time” and then updates the times when you hit the button to start the journey.
+
+![The button](the_button.jpg)
 
 When you press the “time travel” button, the preset time is sent from the left Pico to the right Pico as an RFC3339 string (fancy, huh?). Then, the present time becomes the new “memory time” — you know, just in case you want to go back to the exact moment you left.
 
