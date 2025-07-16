@@ -3,6 +3,10 @@ languageCode: en-us
 title: Pavel Anni
 theme: PaperMod
 
+services:
+  googleAnalytics:
+    id: G-VFKTFN0DW8
+
 params:
   author: Pavel Anni
   description: Pavel Anni's personal website
