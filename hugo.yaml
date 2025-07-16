@@ -52,3 +52,5 @@ menu:
 build:
   templateMetrics: true
   templateMetricsHints: true
+
+ignoreLogs: ['warning-partial-superfluous-prefix']
