@@ -1,0 +1,35 @@
+# Pavel Anni
+
+> Pavel Anni is a software engineer passionate about exploring new technologies and sharing what he learns. He writes about programming, microcontrollers, AI/ML tools, and other technology topics.
+> For every post, you can add `index.md` to the URL to get a markdown version in plain text that you can use as context for calls to LLMs.
+
+You can find [more information about me on this page](/about/index.md).
+
+## Categories
+
+### Blog Posts
+- [MCP Server Development](/blog/mcp_server_user_tools/index.md) - Model Context Protocol server for MinIO AIStor
+- [MCP Server Administration](/blog/mcp_server_admin_tools/index.md) - Administrative functions with MCP servers
+- [MCP Server Architecture](/blog/mcp_server_how/index.md) - How MCP servers work internally
+- [IoT and Microcontrollers](/blog/control_panel/index.md) - Hardware projects and embedded systems
+- [Smart Home Projects](/blog/geekhouse_story/index.md) - Home automation and IoT projects
+- [System Administration](/blog/ssh_login_monitor/index.md) - Monitoring and security tools
+
+### Projects
+- [Control Panel Project](/projects/control_panel/index.md) - Custom control panel with ESP32
+- [GeekHouse Automation](/projects/geekhouse/index.md) - Smart home automation system
+- [SSH Login Monitor](/projects/ssh_login_monitor/index.md) - Security monitoring tool
+
+### Technical Writing
+- [AI Development Stages](/texts/four_stages_ai_development/index.md) - Thoughts on AI evolution
+- [Unit Systems Analysis](/texts/unit_systems/index.md) - Engineering measurement systems
+- [AI Risk Assessment](/texts/steps_to_ai_disaster/index.md) - Potential AI disaster scenarios
+
+## Recent Posts
+
+- [Model Context Protocol (MCP) Server for AIStor: User Tools](/blog/mcp_server_user_tools/index.md)
+- [Model Context Protocol (MCP) Server for AIStor: Administration Functions](/blog/mcp_server_admin_tools/index.md)
+- [Model Context Protocol (MCP) Server for AIStor: How it Works](/blog/mcp_server_how/index.md)
+- [Control Panel Project](/blog/control_panel/index.md)
+- [GeekHouse Story](/blog/geekhouse_story/index.md)
+- [SSH Login Monitor](/blog/ssh_login_monitor/index.md)

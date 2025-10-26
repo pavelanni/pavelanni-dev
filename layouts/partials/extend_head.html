@@ -2,4 +2,10 @@
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /*     Google Analytics is now handled by the theme's google_analytics.html partial */ -}}
+
+{{- /* Add markdown alternative link for LLMs */ -}}
+{{ if .OutputFormats.Get "MARKDOWN" }}
+<link href="{{ with .OutputFormats.Get "MARKDOWN" }}{{ .Permalink }}{{ end }}" rel="alternate" type="text/markdown" title="{{ .Title }}" />
+{{ end }}
+
 {{- /* Head custom content area end */ -}}

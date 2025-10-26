@@ -5,3 +5,33 @@
     border-radius: var(--radius);
     border: 1px solid var(--border);
 }
+
+/* Figure and image styling for Hugo shortcodes */
+.post-content figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.post-content figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-content figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+/* Regular images (non-figure) fallback */
+.post-content img:not(figure img) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}

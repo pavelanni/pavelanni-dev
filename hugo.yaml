@@ -53,8 +53,22 @@ menu:
     url: /about/
     weight: 40
 
+outputFormats:
+  markdown:
+    name: "markdown"
+    baseName: "index"
+    mediaType: "text/markdown"
+    isPlainText: true
+
+outputs:
+  home: [ "HTML", "RSS" ]
+  page: [ "HTML", "MARKDOWN" ]
+  section: [ "HTML", "RSS" ]
+  taxonomy: [ "HTML", "MARKDOWN" ]
+  term: [ "HTML", "MARKDOWN" ]
+
 build:
   templateMetrics: true
   templateMetricsHints: true
 
-ignoreLogs: ['warning-partial-superfluous-prefix']
+ignoreLogs: [ 'warning-partial-superfluous-prefix' ]
